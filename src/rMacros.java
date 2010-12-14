@@ -47,6 +47,9 @@ public class rMacros extends Plugin{
 						isFirst = false;
 						continue;
 					}
+					for (int i = 1; i < split.length; i++) {
+						commandString = commandString.replaceAll("<<param" + i + ">>", split[i]);
+					}
 					player.command(commandString);
 				}
 				return true;
